@@ -71,9 +71,10 @@ class ConvertToSqlite extends Command
             $this->output->block('[DEBUG] Running command: '.$command);
         }
 
-        if (empty(shell_exec("which mysqldump"))) {
-            throw new MissingDependency('mysqldump is not available');
-        }
+        //TODO Replace with path to mysqldump variable
+//        if (empty(shell_exec("which mysqldump"))) {
+//            throw new MissingDependency('mysqldump is not available');
+//        }
 
         if (is_executable($this->config->converterExecutable()) === false) {
             $process = new Process('chmod +x '.$this->config->converterExecutable());

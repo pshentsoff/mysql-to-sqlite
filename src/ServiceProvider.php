@@ -15,7 +15,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/mysql-to-sqlite.php' => app()->getConfigurationPath('mysql-to-sqlite.php')
+            __DIR__ . '/../config/mysql-to-sqlite.php' => config_path('mysql-to-sqlite.php')
         ]);
     }
     /**
