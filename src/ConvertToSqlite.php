@@ -98,6 +98,12 @@ class ConvertToSqlite extends Command
             }
         });
 
+        $db = new \SQLite3(storage_path(basename($this->config->outputPath())));
+
+        foreach ($this->config->tables() as $mobileTable => $serverTable) {
+            $db->exec("ALTER TABLE $serverTable RENAME TO $mobileTable;");
+        }
+
         $this->output->success('Dump created at '.$outputPath);
     }
 }
