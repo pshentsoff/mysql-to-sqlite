@@ -148,6 +148,22 @@ class ConversionConfig
         return [];
     }
 
+    public function afterScriptClosure()
+    {
+        $closure = function (){};
+
+        if (!empty($this->conversionConfig['afterScript'])){
+            $closure = $this->conversionConfig['afterScript'];
+        }
+
+        return $closure;
+    }
+
+    public function executeAfterScriptClosure()
+    {
+        ($this->afterScriptClosure())();
+    }
+
     private function databaseConnectionConfig()
     {
         return $this->configRepository->get('database.connections.'.$this->conversionConfig['connection']);

@@ -104,6 +104,8 @@ class ConvertToSqlite extends Command
             $db->exec("ALTER TABLE $serverTable RENAME TO $mobileTable;");
         }
 
+        $this->config->executeAfterScriptClosure();
+
         $this->output->success('Dump created at '.$outputPath);
     }
 }
