@@ -2,6 +2,7 @@
     "name": "pshentsoff/mysql-to-sqlite",
     "description": "Create & convert MySQL dump to SQLite DB file",
     "type": "library",
+    "version": "1.2.1",
     "license": "MIT",
     "authors": [
         {
