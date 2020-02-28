@@ -1,5 +1,6 @@
 {
-    "name": "tod/mysql-to-sqlite",
+    "name": "pshentsoff/mysql-to-sqlite",
+    "description": "Create & convert MySQL dump to SQLite DB file",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -10,6 +11,10 @@
         {
             "name": "Denis Riabiy",
             "email": "denis4yk19@gmail.com"
+        }
+        {
+            "name": "Vadim Pshentsov",
+            "email": "pshentsoff@gmail.com"
         }
     ],
     "autoload": {

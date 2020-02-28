@@ -2,11 +2,17 @@
 
 This is a Laravel wrapper for [esperlu's mysql2sqlite.sh](https://gist.github.com/esperlu/943776) which converts a mysqldump to an Sqlite 3 compatible file.
 
+* [Installation](#installation)
 * [Usage](#usage)
 * [Configuration](#configuration)
-* [Installation](#installation)
 
-[![Latest Stable Version](https://poser.pugx.org/realpagelouisville/mysql-to-sqlite/v/stable.png)](https://packagist.org/packages/realpagelouisville/mysql-to-sqlite) [![Total Downloads](https://poser.pugx.org/realpagelouisville/mysql-to-sqlite/downloads.png)](https://packagist.org/packages/realpagelouisville/mysql-to-sqlite) [![Build Status](https://travis-ci.org/RealpageLouisville/mysql-to-sqlite.svg?branch=master)](https://travis-ci.org/realpagelouisville/mysql-to-sqlite)
+# Installation
+
+You're probably only using this for development, so we'll use `require-dev`:
+
+```
+composer require --dev pshentsoff/mysql-to-sqlite
+```
 
 # Usage
 
@@ -62,11 +68,3 @@ Add the following to `app/bootstrap/app.php`
      $app->register(MysqlToSqlite\ServiceProvider::class);
  }
  ```
-
-# Installation
-
-You're probably only using this for development, so we'll use `require-dev`:
-
-```
-composer require --dev realpagelouisville/mysql-to-sqlite:~1.*
-```
