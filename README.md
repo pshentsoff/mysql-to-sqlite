@@ -47,7 +47,7 @@ public function register()
 {
     // Class may not be there if it was loaded as a dev dependency
     if (class_exists('MysqlToSqlite\ServiceProvider')) {
-        $this->app->register(MysqlToSqlite\ServiceProvider::class),
+        $this->app->register(\MysqlToSqlite\ServiceProvider::class);
     }
 }
 ```
